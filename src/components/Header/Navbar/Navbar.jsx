@@ -1,5 +1,5 @@
 import React from 'react';
-import CartWidget from '../../CartWidget';
+import {CartWidget, OtroCart} from '../../CartWidget';
 import estilos from './navbar.module.css';
 
 const Navbar = () =>{
@@ -7,7 +7,7 @@ const Navbar = () =>{
     <nav className={estilos.navbar}>
         <h1>Huesos M.R</h1>
             <ul>
-                <li>Lista de precios</li>
+                <li><OtroCart/>Lista de precios</li>
                 <li><CartWidget />Puntos de venta</li>
                 
             </ul>
