@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const Contador = ({stock}) => {
     const [cantidad,setCantidad]=useState(50);
-    let x =50
+    
     const sumar = () =>{
         if(cantidad<stock){ 
        setCantidad(cantidad + 50);

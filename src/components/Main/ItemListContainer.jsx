@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { products } from "../../mock/products";
 import ItemList from "./ItemList";
+import { products } from "../../mock/products";
+
 const ItemListContainer = () => {
     const [items,setItems] = useState([]);
     
@@ -22,7 +23,7 @@ const ItemListContainer = () => {
     },  []);      
 
   return (
-    <div id="container">I
+    <div id="container">
      <ItemList items={items}/>
     </div>
   );

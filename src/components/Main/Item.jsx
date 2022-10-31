@@ -1,11 +1,10 @@
 import React from 'react'
-import { products } from '../../mock/products'
-const Item = () => {
+const Item = ({producto}) => {
   return (
-    <div><img src={products.img} alt={products.id} />
+    <div><img src={producto.img} alt={producto.id} />
     <article>
-        <h2>{products.title}</h2>
-        <h3>${products.price}</h3>
+        <h2>{producto.title}</h2>
+        <h3>${producto.price}</h3>
     </article>
     </div>
 
@@ -13,3 +12,4 @@ const Item = () => {
 }
 
 export default Item
+

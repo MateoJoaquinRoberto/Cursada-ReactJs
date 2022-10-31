@@ -3,3 +3,10 @@ header{padding: 0px;
   box-sizing: border-box;
  
 }
+
+Main{
+  font-size: 55px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: center;
+}
+
