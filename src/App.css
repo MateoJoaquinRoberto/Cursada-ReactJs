@@ -8,5 +8,26 @@ Main{
   font-size: 55px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   text-align: center;
+  
 }
 
+.links{
+  padding: 4px 6px;
+  text-decoration: none;
+  color: beige;
+  margin: 0px 10px;
+}
+.Itemlist{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.Item{
+  position: relative;
+  margin: 40px 16px 16px 16px;
+  border-radius: 8px;
+  padding: 8px;
+  transition: all 0.2s ease-in-out;
+}

@@ -17,3 +17,10 @@ format_list_bulleted
   )
 }
 
+export const OtroCarro = () =>{ 
+  return( 
+    <span class="material-symbols-outlined" style={{ marginLeft:390,color: "beige",fontSize:38}}>
+    shopping_cart
+    </span>
+  )
+}

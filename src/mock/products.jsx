@@ -1,6 +1,7 @@
 export const products = [
     {
         id:1,
+        category:"grandes",
         title:"Grisines",
         price: 50,
         stock: 1000,
@@ -10,6 +11,7 @@ export const products = [
 
     {
         id:2,
+        category:"medianos",
         title:"Donas",
         price: 124,
         stock: 400,
@@ -19,6 +21,7 @@ export const products = [
 
     {
         id:3,
+        category:"pequeños",
         title:"Rolss",
         price: 172,
         stock: 800,
@@ -26,3 +29,15 @@ export const products = [
 
     }
 ];
+
+export const getProducts = (categoryName) => {
+    return new Promise((res, rej) => {
+        const prodFiltrados = products.filter(
+            (prod) => prod.category === categoryName
+        );
+        const ref = categoryName ? prodFiltrados : products;
+        setTimeout(() => {
+            res(ref);
+        }, 500);
+    });
+};

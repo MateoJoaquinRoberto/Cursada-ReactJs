@@ -1,29 +1,28 @@
-import { useState } from "react";
+import { useEffect,useState } from "react";
 import ItemList from "./ItemList";
-import { products } from "../../mock/products";
+import { getProducts } from "../../mock/products";
+import {useParams } from "react-router-dom";
 
 const ItemListContainer = () => {
     const [items,setItems] = useState([]);
-    
-    useState(() => { 
-        const getProducts = () =>{  
-           return new Promise ((res,rej) =>{ 
-                setTimeout(()=>{
-                    res(products);
-                },2000)
-           });
-        };
-        getProducts()
-            .then((res)=>{
-                setItems(res)
-            })
-            .catch((error)=>{
 
-            });
-    },  []);      
+
+    
+    
+  const {categoryName}= useParams();
+    
+  useEffect(() => { 
+      getProducts(categoryName)
+          .then((res)=>{
+              setItems(res)
+          })
+          .catch((error)=>{
+              console.log(error);
+          });
+  }, [categoryName]);      
 
   return (
-    <div id="container">
+    <div className="container">
      <ItemList items={items}/>
     </div>
   );
