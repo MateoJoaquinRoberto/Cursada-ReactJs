@@ -41,3 +41,13 @@ export const getProducts = (categoryName) => {
         }, 500);
     });
 };
+
+
+export const getProduct = (id) => {
+    return new Promise(( res ) => {
+        const  product = products.find(p => p.id === parseInt(id))
+        setTimeout(() => {
+             res ( product )
+        }, 2000)
+    })
+}

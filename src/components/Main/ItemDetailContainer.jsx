@@ -1,27 +1,19 @@
 import { useEffect,useState } from 'react'
 import ItemDetail from './ItemDetail'
 import {useParams} from "react-router-dom"
-import { products } from '../../mock/products'
+import { getProduct } from './ItemList'
 
 const ItemDetailContainer = () => {
     const [item,setItem] = useState({})
     const {idProd} = useParams()
        
-    useEffect(()=>{
-        const getProducts= () =>{
-            return new Promise ((res,rej)=>{
-                const product = products.find((prod)=>prod.id===3)
-                setTimeout(()=>{},2000)
-                res(product)
-            })
-        }
-        getProducts.then((res)=>{ 
-            setItem(res);
-
-        }).catch((error)=>{
+    useEffect(() => {
+        getProduct(idProd).then(item => {
+            setItem(item)
+        }).catch((error) => {
             console.log(error)
         })
-    })
+    }, [idProd])
   return (
         <div 
             style={{
