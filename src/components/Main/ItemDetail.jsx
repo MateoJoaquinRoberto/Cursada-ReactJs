@@ -9,7 +9,7 @@ const ItemDetail = ({item}) => {
         <div>
             <h2>{item.title}</h2>
              <h3>${item.price}</h3>
-             <Contador stock={item.stocl} onAdd={onAdd}/> 
+             <Contador stock={item.stock} onAdd={onAdd}/> 
         </div>
     </div>
   );
