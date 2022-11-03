@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Contador = ({stock}) => {
+const Contador = ({stock,onAdd}) => {
     const [cantidad,setCantidad]=useState(50);
     
     const sumar = () =>{
@@ -14,18 +14,25 @@ const Contador = ({stock}) => {
         setCantidad( cantidad - 50);
     
     }
+
+    const agregar =() =>{
+        onAdd(cantidad);
+    };
+
     return (
-    <div 
-        style={{ 
-            display:"flex",
-            justifyContent: "center",
-            alignItems: "center",
-            minHeight: "80vh"
-        }}
-    >
+    <div className="counter"> 
+        <section>   
+            <p>{cantidad}</p>
+    <div>              
     <button disabled={cantidad=== 50} onClick={resta}>-</button>    
-    <p>{cantidad}</p>
     <button disabled={cantidad=== stock} onClick={sumar}>+</button>
+    </div>
+    </section>
+        <div>
+            <button className="add" onClick={agregar}>
+                Agregar al carrito
+            </button>
+        </div>
     </div>
   )
 }
