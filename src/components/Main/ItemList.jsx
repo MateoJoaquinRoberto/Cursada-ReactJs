@@ -18,7 +18,7 @@ export const getProduct = (id) => {
         const  product = products.find(p => p.id === parseInt(id))
         setTimeout(() => {
              res ( product )
-        }, 2000)
+        }, 200)
     })
 }
 

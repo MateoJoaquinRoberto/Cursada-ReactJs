@@ -1,10 +1,11 @@
 import Navbar from "./Navbar/Navbar";
 
 const Header = () => {
-    return(<header>
-       <Navbar/>
-      </header>
-
+    return (
+        <header>
+            <Navbar isInHeader={true} />
+        </header>
     );
 };
-export default Header
+
+export default Header;
